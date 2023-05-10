@@ -5,7 +5,7 @@ import Notiflix from 'notiflix';
 
 const API_KEY = '36223855-9729aa23392660264fa235b58';
 const BASE_URL = 'https://pixabay.com/api/';
-const PER_PAGE = 10;
+const PER_PAGE = 40;
 
 const form = document.querySelector('#search-form');
 const gallery = document.querySelector('.gallery');
@@ -69,7 +69,7 @@ async function handleFormSubmit(event) {
 
 
 async function handleLoadMoreBtnClick() {
-  page++;
+  page +=1;
 
   try {
     const response = await axios.get(BASE_URL, {
