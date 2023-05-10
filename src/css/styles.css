@@ -1,59 +1,122 @@
-.search-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
+  body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+        Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+      height: 100vh;
+    }
 
-.search-form {
-  display: flex;
-}
+    /* img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    } */
 
-.search-form input[type="text"] {
-  width: 60%;
-  padding: 10px;
-  border: none;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
+    p {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
 
-.search-form button[type="submit"] {
-  padding: 10px;
-  border: none;
-  background-color: #4caf50;
-  color: #fff;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  cursor: pointer;
-}
+    ul {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-left: 0;
+    }
 
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
+    .list {
+      list-style: none;
+    }
 
-.photo-card {
-  width: 300px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-}
+    .container {
+      max-width: 1280px;
+      padding-left: 30px;
+      padding-right: 30px;
+      margin: 0 auto;
+    }
 
-.photo-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
+    .search-form {
+      display: flex;
+      width: 600px;
+      margin: 0 auto;
+      align-items: center;
+      justify-content: center;
+      }
 
-.photo-card .info {
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-}
+    .search-input {
+      border: 1px solid aqua;
+      outline: none;
+     padding: 20px 30px 20px 20px;
+      border-radius: 35px;
+      background: #81e3e32d;
+      color: #000000;
+      font-family: inherit;
+      font-size: 35px;
+      width: 350px;
+      height: 50px;
+    }
 
-.photo-card .info-item {
-  margin-right: 20px;
-}
+    .load-more {
+      display: block;
+      font-size: 14px;
+      padding: 10px 20px;
+      background: #ace80853;
+      color: #000;
+      border-radius: 25px;
+      border: 1px solid aqua;
+      text-transform: uppercase;
+      cursor: pointer;
+      margin-left: 10px;
+      margin: 0 auto;
+      transition: background 0.2s ease-in-out;
+    }
+
+    .load-more:hover {
+      background: #8fb1ebac;
+    }
+
+    .load-more.is-hidden {
+      display: none;
+    }
+
+    .gallery {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      row-gap: 20px;
+      column-gap: 25px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 0 auto;
+    }
+
+    .photo-card {
+      flex-basis: calc((100% - 100px) / 3);
+     
+    }
+
+    .photo-img {
+      width: 100%;
+      max-width: unset;
+      object-fit: cover;
+    }
+
+    .search-btn {
+      margin: 15px;
+      border-radius: 25px;
+      border: 1px solid aqua;
+      height: 86px;
+      width: 95px;
+      outline: none;
+      background: #81e3e32d;
+      color: #000;
+      cursor: pointer;
+      transition: background 0.3s ease-in-out;
+    }
+
+    .search-btn:hover {
+      background: #88e1ffac;
+    }
+    .target-element{
+      display: none;
+    }
+    .target-element.is-visible{
+      display: block;
+    }
