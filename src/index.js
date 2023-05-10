@@ -24,7 +24,7 @@ async function handleFormSubmit(event) {
   searchQuery = event.currentTarget.elements.searchQuery.value;
 
   if (searchQuery.trim() === '') {
-    Notiflix.Notify.warning('Please enter a search query.');
+   Notiflix.Report.info('Hi!', 'Please enter a search query.','Ok');
     return;
   }
 
@@ -45,9 +45,7 @@ async function handleFormSubmit(event) {
     const totalHits = response.data.totalHits;
 
     if (hits.length === 0) {
-      Notiflix.Notify.info(
-        'Sorry, there are no images matching your search query. Please try again.'
-      );
+     Notiflix.Report.warning('Sorry', 'There are no images matching your search query. Please =>', ' Try again');
       resetPage();
       return;
     }
