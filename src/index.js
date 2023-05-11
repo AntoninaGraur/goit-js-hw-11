@@ -58,7 +58,7 @@ async function handleFormSubmit(event) {
 
     if (hits.length < PER_PAGE) {
       loadMoreBtn.classList.add('is-hidden');
-      Notiflix.Notify.info("We're sorry, but you've reached the end of search results.");
+      Notiflix.Report.warning('We are sorry', 'But you have reached the end of search results.', 'Fine');
     } else {
       loadMoreBtn.classList.remove('is-hidden');
     }
@@ -91,7 +91,7 @@ async function handleLoadMoreBtnClick() {
 
     if (gallery.children.length >= currentTotalHits) {
       loadMoreBtn.classList.add('is-hidden');
-      Notiflix.Notify.info("We're sorry, but you've reached the end of search results.");
+      Notiflix.Report.warning('We are sorry', 'But you have reached the end of search results.', 'Fine');
     }
 
   } catch (error) {
