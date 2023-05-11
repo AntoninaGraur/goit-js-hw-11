@@ -2,6 +2,7 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
         Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
       height: 100vh;
+      background-color: rgba(127, 255, 212, 0.178);
     }
 
     /* img {
@@ -89,13 +90,15 @@
 
     .photo-card {
       flex-basis: calc((100% - 100px) / 3);
-     
+     margin: 0;
     }
 
     .photo-img {
       width: 100%;
       max-width: unset;
       object-fit: cover;
+      margin: 0;
+      box-shadow: 1px 2px 18px 0px rgba(0,0,0,0.39);
     }
 
     .search-btn {
@@ -120,3 +123,11 @@
     .target-element.is-visible{
       display: block;
     }
+    .info{
+      display: flex;
+      gap: 15px;
+      text-shadow: 1px -2px 3px rgba(23,10,6,0.62);
+      color: #040404;
+      background: #FFFFFF;
+    }
+    

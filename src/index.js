@@ -29,6 +29,7 @@ async function handleFormSubmit(event) {
   }
 
   try {
+    page = 1;
     const response = await axios.get(BASE_URL, {
       params: {
         key: API_KEY,
@@ -103,7 +104,7 @@ function createGalleryMarkup(hits) {
   const markup = hits
     .map(({ webformatURL, likes, views, comments, downloads }) => {
       return `<div class="photo-card">
-                <img class="photo-img " src="${webformatURL}" alt="" loading="lazy" />
+                <img class="photo-img " width="250" height="225" src="${webformatURL}" alt="" loading="lazy" />
                 <div class="info">
                   <p class="info-item"><b>Likes:</b> ${likes}</p>
                   <p class="info-item"><b>Views:</b> ${views}</p>
@@ -123,3 +124,6 @@ currentTotalHits = 0;
 loadMoreBtn.classList.add('is-hidden');
 gallery.innerHTML = '';
 };
+// per page мало бути 40)
+// Коли погортаю пару сторінок і після цього зроблю новий запит, то сторінка не обнулиться, тобто може початись наприклад із 3 сторінки
+// Тут теж можна собі було трохи рознести усе по файликах, фетч окремо, функції для створення розмітки окремо
